@@ -51,7 +51,8 @@ class Card {
       // Assume Ace is always 1. 
       // Useful if you want to sort the cards.
       bool operator < (Card card2) const;
-    void print();
+    
+    
 
 private:
       suit_t suit;
@@ -66,7 +67,7 @@ class Hand {
 
       // You decide what functions you'll need...
     Card draw();
-    void display();
+    friend ostream& operator<<(ostream& out, Hand x);
     double get_total ();
     void empty();
 
@@ -93,4 +94,5 @@ class Player {
       // You decide what extra fields (if any) you'll need...
 };
 
+ostream& operator<<(ostream& out, Card c);
 #endif

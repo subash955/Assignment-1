@@ -182,11 +182,11 @@ int Card::get_rank() const {
 bool Card::operator < (Card card2) const {
     return rank < card2.rank;
 }
-void Card::print()
+ostream& operator<<(ostream& out, Card card)
 {
-    cout << this->get_spanish_rank() << " de " << this->get_spanish_suit() << "    (" << this->get_english_rank() << " of " << this->get_english_suit() << ")" << endl;
+    out << card.get_spanish_rank() << " de " << card.get_spanish_suit() << "    (" << card.get_english_rank() << " of " << card.get_english_suit() << ")" << endl;
+    return out;
 }
-
 
 /* *************************************************
  Hand class
@@ -207,13 +207,17 @@ Card Hand::draw()
     return c;
 }
 
-void Hand::display()
+ostream& operator<<(ostream& out, Hand x)
 {
-    for (int i = 0; i < hand.size(); i++)
+    for (int i = 0; i < x.hand.size(); i++)
     {
-        hand[i].print();
+        out <<  x.hand[i];
     }
+    return out;
 }
+
+
+    
 double Hand::get_total()
 {return total;}
 
