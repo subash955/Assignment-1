@@ -77,6 +77,9 @@ class Player {
       Player(int m);
 
       // You decide what functions you'll need...
+      int bet();
+      void change_money(int m);
+      int get_money () const;
 
    private:
       int money;
