@@ -64,9 +64,9 @@ class Hand {
       Hand();
 
       // You/Users/subash/Desktop/untitled2/cards.cpp decide what functions you'll need...
-    void draw(Card);
+    void draw();
     void display();
-    void get_total ();
+    int get_total ();
 
    private:
       // You decide what fields you'll need...

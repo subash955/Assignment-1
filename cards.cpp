@@ -194,12 +194,22 @@ Hand::Hand()
     total = 0;
 }
 
-void Hand::draw(Card c)
+void Hand::draw()
 {
+    Card c;
     hand.push_back(c);
     total += c.get_rank();
 }
 
+void Hand::display()
+{
+    for (int i = 0; i < hand.size(); i++)
+    {
+        cout << hand[i].get_spanish_rank() << " de " << hand[i].get_spanish_suit() << "    (" << hand[i].get_english_rank() << " of " << hand[i].get_english_suit() << endl;
+    }
+}
+int Hand::get_total()
+{return total;}
 
 
 /* *************************************************
