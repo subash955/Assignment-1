@@ -64,7 +64,7 @@ class Hand {
       Hand();
 
       // You decide what functions you'll need...
-    void draw();
+    Card draw();
     void display();
     int get_total ();
 
