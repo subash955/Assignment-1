@@ -203,9 +203,10 @@ void Hand::draw()
 
 void Hand::display()
 {
+    cout << "Your cards: " << endl;
     for (int i = 0; i < hand.size(); i++)
     {
-        cout << hand[i].get_spanish_rank() << " de " << hand[i].get_spanish_suit() << "    (" << hand[i].get_english_rank() << " of " << hand[i].get_english_suit() << endl;
+        cout << hand[i].get_spanish_rank() << " de " << hand[i].get_spanish_suit() << "    (" << hand[i].get_english_rank() << " of " << hand[i].get_english_suit() << ")" << endl;
     }
 }
 int Hand::get_total()
@@ -223,7 +224,7 @@ int Player::bet()
 {
     int bet;
     do {
-        cout << "How much would you like to bet ";
+        cout << " Enter bet: ";
         cin >> bet;
         }
     while(bet > money);
