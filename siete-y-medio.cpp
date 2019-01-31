@@ -34,18 +34,20 @@ int checkwin (double p, double d)
 int main(){
    /* --STATEMENTS-- */
     srand(time (0));
+    ofstream fout;
+    fout.open("gamelog.txt");
     Player p1(100);
     Hand p1_hand;
     Player dealer(900);
     Hand dealer_hand;
-    int win, bet;
+    int win, bet, gn = 0;
     while(p1.get_money() > 0 && dealer.get_money() > 0)
     {
         cout << "You have: " << p1.get_money();
         bet = p1.bet();
         p1_hand.draw();
         cout << "Your cards: " << endl;
-        p1_hand.display();
+        cout << p1_hand;
         cout << "Your total is " << p1_hand.get_total() << " Do you want another card? ";
         char c;
         cin >> c;
@@ -53,7 +55,7 @@ int main(){
         {
             
             cout << "New card: ";
-            p1_hand.draw().print();
+            cout << p1_hand.draw();
             cout << "Your total is " << p1_hand.get_total() << endl;
             if(p1_hand.get_total() > 7.5)
                 break;
@@ -62,8 +64,8 @@ int main(){
         }
          while (dealer_hand.get_total() < 5.5)
             {
-                cout << "New card: ";
-                dealer_hand.draw().print();
+                cout << "New card: " << endl;
+                cout << dealer_hand.draw();
             }
         
             cout << "The dealer's total is: " << dealer_hand.get_total() << endl;
@@ -81,8 +83,22 @@ int main(){
             p1.change_money(p1.get_money() + bet);
             dealer.change_money(dealer.get_money() - bet);
         }
+        gn++;
+        
+        fout << "-----------------------------------------------\n" << endl;
+        fout << "Game number: " << gn << "     Money left: $" << p1.get_money() << endl;
+        fout << "Bet: " << bet << endl;
+        fout << "Your cards: " << endl << endl;
+        fout << p1_hand << endl;
+        fout << "Your total: " << p1_hand.get_total() << endl << endl;
+        fout << "Dealer's cards: " << endl << endl;
+        fout << dealer_hand << endl;
+        fout << "Dealer's total is " << dealer_hand.get_total() << endl;
+        
         p1_hand.empty();
         dealer_hand.empty();
+        
+        
     }
     
    return 0;
