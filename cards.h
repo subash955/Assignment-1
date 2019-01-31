@@ -51,6 +51,7 @@ class Card {
       // Assume Ace is always 1. 
       // Useful if you want to sort the cards.
       bool operator < (Card card2) const;
+    void print();
 
 private:
       suit_t suit;

@@ -182,7 +182,10 @@ int Card::get_rank() const {
 bool Card::operator < (Card card2) const {
     return rank < card2.rank;
 }
-
+void Card::print()
+{
+    cout << this->get_spanish_rank() << " de " << this->get_spanish_suit() << "    (" << this->get_english_rank() << " of " << this->get_english_suit() << ")" << endl;
+}
 
 
 /* *************************************************
@@ -206,7 +209,7 @@ void Hand::display()
 {
     for (int i = 0; i < hand.size(); i++)
     {
-        cout << hand[i].get_spanish_rank() << " de " << hand[i].get_spanish_suit() << "    (" << hand[i].get_english_rank() << " of " << hand[i].get_english_suit() << ")" << endl;
+        hand[i].print();
     }
 }
 int Hand::get_total()
