@@ -189,6 +189,16 @@ bool Card::operator < (Card card2) const {
  Hand class
  ************************************************* */
 // Implemente the member functions of the Hand class here.
+Hand::Hand()
+{
+    total = 0;
+}
+
+void Hand::draw(Card c)
+{
+    hand.push_back(c);
+    total += c.get_rank();
+}
 
 
 
