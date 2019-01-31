@@ -64,9 +64,14 @@ class Hand {
       Hand();
 
       // You decide what functions you'll need...
+    void draw();
+    void display();
+    void get_total ();
 
    private:
       // You decide what fields you'll need...
+    vector<Card> hand;
+    double total;
 };
 
 
