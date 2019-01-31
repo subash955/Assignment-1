@@ -113,7 +113,7 @@ string Card::get_english_suit() const {
     string suitName;
     switch (suit) {
         case OROS:
-            suitName = "coints";
+            suitName = "coins";
             break;
         case COPAS:
             suitName = "cups";
