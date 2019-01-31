@@ -201,7 +201,9 @@ Card Hand::draw()
 {
     Card c;
     hand.push_back(c);
-    total += c.get_rank();
+    if(c.get_rank() < 8)
+        total += c.get_rank();
+    else total += 0.5;
     return c;
 }
 
@@ -212,7 +214,7 @@ void Hand::display()
         hand[i].print();
     }
 }
-int Hand::get_total()
+double Hand::get_total()
 {return total;}
 
 
