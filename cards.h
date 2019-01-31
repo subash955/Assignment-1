@@ -68,6 +68,7 @@ class Hand {
     Card draw();
     void display();
     double get_total ();
+    void empty();
 
    private:
       // You decide what fields you'll need...

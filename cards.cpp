@@ -217,6 +217,13 @@ void Hand::display()
 double Hand::get_total()
 {return total;}
 
+void Hand::empty()
+{
+    total = 0;
+    while (hand.size() > 0)
+        hand.pop_back();
+}
+
 
 /* *************************************************
  Player class
