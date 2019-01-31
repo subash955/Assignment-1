@@ -63,8 +63,8 @@ class Hand {
       // A vector of Cards
       Hand();
 
-      // You decide what functions you'll need...
-    void draw();
+      // You/Users/subash/Desktop/untitled2/cards.cpp decide what functions you'll need...
+    void draw(Card);
     void display();
     void get_total ();
 
