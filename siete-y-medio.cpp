@@ -1,3 +1,5 @@
+// siete-y-medio.cpp, contains main() for the game
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -6,6 +8,7 @@
 #include <cstdlib>
 #include "cards.h"
 using namespace std;
+
 
 // Global constants (if any)
 
@@ -37,16 +40,16 @@ int main(){
     ofstream fout;
     fout.open("gamelog.txt");
       int m = 0, d = 0;
-    while(m<=0)
-    {
-    cout << "Welcome to Siete y Medio, how much money would you like ? " << endl;
+   
+    
+    cout << "Welcome to Siete y Medio, how much money would you like to start with? " << endl;
     cin >> m;
-    }
-    while(d<= 0)
-    {
-        cout << "How much money would you like the dealer to have? \n";
+  
+
+    
+    cout << "How much money would you like the dealer to have? \n";
         cin >> d;
-    }
+    
     Player p1(m);
     Hand p1_hand;
     Player dealer(d);
