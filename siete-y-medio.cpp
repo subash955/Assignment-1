@@ -48,7 +48,7 @@ int main(){
         p1_hand.draw();
         cout << "Your cards: " << endl;
         cout << p1_hand;
-        cout << "Your total is " << p1_hand.get_total() << " Do you want another card? ";
+        cout << "Your total is " << p1_hand.get_total() << " Do you want another card? (y/n) ";
         char c;
         cin >> c;
         while (c == 'Y' || c == 'y' )
