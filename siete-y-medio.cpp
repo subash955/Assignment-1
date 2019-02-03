@@ -1,3 +1,5 @@
+// siete-y-medio.cpp, contains main() for the game
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -6,6 +8,7 @@
 #include <cstdlib>
 #include "cards.h"
 using namespace std;
+
 
 // Global constants (if any)
 
