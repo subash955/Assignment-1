@@ -21,6 +21,12 @@ When the game prompts the user if they want another card, entering any input bes
 Do you want another card? (y/n) p
 ```
 This would be counted as 'n'
+
+```
+Welcome to Siete y Medio, how much money would you like? -1
+```
+This would be invalid and prompt a valid input
+
 ## Authors
 
 * **Subash Sundar Raman** 
