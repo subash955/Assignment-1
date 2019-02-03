@@ -36,11 +36,23 @@ int main(){
     srand(time (0));
     ofstream fout;
     fout.open("gamelog.txt");
-    Player p1(100);
+      int m = 0, d = 0;
+    while (m <=0)
+    {
+        cout << "Welcome to Siete y Medio, how much money would you like? " << endl;
+    cin >> m;
+    }
+    while (d <= 0)
+    {
+        cout << "How much money would you like the dealer to have? " << endl;
+        cin >> d;
+    }
+    Player p1(m);
     Hand p1_hand;
-    Player dealer(900);
+    Player dealer(d);
     Hand dealer_hand;
     int win, bet, gn = 0;
+    
     while(p1.get_money() > 0 && dealer.get_money() > 0)
     {
         cout << "You have: " << p1.get_money();
