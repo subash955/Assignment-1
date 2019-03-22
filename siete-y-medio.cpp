@@ -1,5 +1,5 @@
 // siete-y-medio.cpp, contains main() for the game
-
+//Subash Sundar Raman, PIC 10 C
 #include <iostream>
 #include <fstream>
 #include <string>
