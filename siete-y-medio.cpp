@@ -39,20 +39,13 @@ int main(){
     srand(time (0));
     ofstream fout;
     fout.open("gamelog.txt");
-      int m = 0, d = 0;
-   
-    
+      int m = 0;
     cout << "Welcome to Siete y Medio, how much money would you like to start with? " << endl;
     cin >> m;
-  
-
-    
-    cout << "How much money would you like the dealer to have? \n";
-        cin >> d;
     
     Player p1(m);
     Hand p1_hand;
-    Player dealer(d);
+    Player dealer(900);
     Hand dealer_hand;
     int win, bet, gn = 0;
     
