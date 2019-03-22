@@ -1,5 +1,5 @@
 /* *************************************
-   Ricardo Salazar, February 26, 2015
+   Subash Sundar Raman, PIC 10 C
 
    Interface of a simple Card class
    ************************************* */
