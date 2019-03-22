@@ -1,7 +1,7 @@
 /* *************************************
    Subash Sundar Raman, PIC 10 C
 
-   Interface of a simple Card class
+   Interface of a simple Card class, cards.h
    ************************************* */
 
 #include <string>
