@@ -1,4 +1,3 @@
-//Subash Sundar Raman, PIC 10C
 // siete-y-medio.cpp, contains main() for the game
 
 #include <iostream>
