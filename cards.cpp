@@ -191,7 +191,7 @@ ostream& operator<<(ostream& out, Card card)
 /* *************************************************
  Hand class
  ************************************************* */
-// Implemente the member functions of the Hand class here.
+
 Hand::Hand()
 {
     total = 0;
@@ -232,7 +232,7 @@ void Hand::empty()
 /* *************************************************
  Player class
  ************************************************* */
-// Implemente the member functions of the Player class here.
+
 Player::Player(int m)
 {money = m;}
 
@@ -251,4 +251,6 @@ void Player::change_money(int m)
 {money = m;}
 
 int Player::get_money() const
-{return money;}
+{
+    return money;
+}
